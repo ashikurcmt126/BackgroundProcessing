@@ -29,7 +29,7 @@ type app struct {
 }
 
 func main() {
-	projectID := "workday-300601"
+	projectID := os.Getenv("GOOGLE_CLOUD_PROJECT")
 	fmt.Println(projectID)
 	if projectID == "" {
 		log.Fatalf("GOOGLE_CLOUD_PROJECT must be set")
